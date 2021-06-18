@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import 'firebase/storage';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAD4HCK60FFt0bLEWr2tpqbULowQXcmNWE",
+    apiKey: process.env.FIREBASE_APP_KEY,
     authDomain: "facebook-byrabi.firebaseapp.com",
     projectId: "facebook-byrabi",
     storageBucket: "facebook-byrabi.appspot.com",

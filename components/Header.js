@@ -17,6 +17,7 @@ import HeaderIcon from './HeaderIcon';
 import { signOut, useSession } from 'next-auth/client';
 import useDarkMode from '../hooks/useDarkMode';
 import { LightBulbIcon, MoonIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 function Header() {
   const [session] = useSession(); //! useSession hook to pull th session information from anywhere within the app
@@ -48,11 +49,16 @@ function Header() {
       {/* Center */}
       <div className="flex justify-center flex-grow">
         <div className="flex space-x-6 md:space-x-2">
-          <HeaderIcon active Icon={HomeIcon} />
-          <HeaderIcon Icon={FlagIcon} />
-          <HeaderIcon Icon={PlayIcon} />
-          <HeaderIcon Icon={ShoppingCartIcon} />
-          <HeaderIcon Icon={UserGroupIcon} />
+          <HeaderIcon active Icon={HomeIcon} link='/' />
+          
+          <HeaderIcon Icon={FlagIcon} link='/flag' />
+            
+          <HeaderIcon Icon={PlayIcon} link="/watch" />
+            
+          <HeaderIcon Icon={ShoppingCartIcon} link="/marketplace" />
+            
+          <HeaderIcon Icon={UserGroupIcon} link="/groups" />
+            
         </div>
       </div>
 
